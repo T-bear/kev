@@ -1,36 +1,27 @@
 {
-  "name": "passport-google-oauth2",
-  "version": "0.2.0",
-  "description": "Passport strategy for Google OAuth 2.0",
-  "main": "./lib/oauth2.js",
-  "directories": {
-    "example": "examples",
-    "test": "test"
-  },
-  "dependencies": {
-    "passport-oauth2": "^1.1.2"
-  },
-  "devDependencies": {
-    "vows": "^0.8.0"
-  },
+  "name": "oauth-playlist",
+  "version": "1.0.0",
+  "description": "Course files for The Net Ninja OAuth playlist on YouTube",
+  "main": "app.js",
   "scripts": {
-    "test": "make test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mstade/passport-google-oauth2.git"
+    "url": "git+https://github.com/iamshaunjp/oauth-playlist.git"
   },
-  "keywords": [
-    "auth",
-    "google",
-    "google+",
-    "passportjs",
-    "oauth2"
-  ],
-  "author": "Marcus Stade <marcus@stade.se>, Ilya Kantor <iliakan@gmail.com>, Alexis Gruet <alexis.gruet@kroknet.com>, Jared Hanson",
-  "license": "MIT",
+  "author": "The Net Ninja",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mstade/passport-google-oauth2/issues"
+    "url": "https://github.com/iamshaunjp/oauth-playlist/issues"
   },
-  "homepage": "https://github.com/mstade/passport-google-oauth2"
+  "homepage": "https://github.com/iamshaunjp/oauth-playlist#readme",
+  "dependencies": {
+    "cookie-session": "^1.3.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.1",
+    "mongoose": "^4.12.0",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0"
+  }
 }
