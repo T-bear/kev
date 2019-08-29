@@ -16,15 +16,15 @@ router.get('/', authCheck, (req, res) => {
         
         if (err) throw err;
         var dbo = db.db("patientdata");
-        dbo.collection("patient").find().toArray( function(err, result) {
+        dbo.collection("patient").findOne({}, function(err, result) {
         if (err) throw err;
             console.log(result)
-            return resultData = result;
+        return resultData = result._id;
             
         db.close();
         });
     });
-    res.render('profile', { user: req.user, result: req.resultData});
+    res.render('patientData', { user: req.user, result: req.resultData});
 });
 
 module.exports = router;

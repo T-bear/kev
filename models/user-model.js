@@ -5,7 +5,7 @@ const userSchema = new Schema({
     username: String,
     googleId: String,
     role: String,
-    patientA: String,
+    patients: Array,
     thumbnail: String
 });
 

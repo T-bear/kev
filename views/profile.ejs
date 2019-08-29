@@ -74,13 +74,33 @@
             <img src="<%= user.thumbnail %>" />
             <p>This is your profile thumbnail</p><br>
                         <% if(user.role === "Doctor"){ %>
-            <p>Here is all your patients: <%= user.patients %></p>
+            <p>Here is all your patients: </p>
+                <ul>
+            <% for (var object of user.patients ) { %>
+                <li><%= object.patient %></li>
+                <% } %> 
+            </ul>
+            
 
             <% } else { %>
             <p>Hi</p>
             <% } %>
-            <br><p>Here is all the patient that has done the exercise: <%= resultData %></p> 
-
+            <% if(user.role === "Researcher"){ %>
+            <br><p>Here is all the patient that has done the exercise: </p>
+            <ul>
+               <% var i = 3 %> 
+            <% for (var object of resultData ) { %>
+                <li><%= object._id %></li><br>
+                <li><%= object.X %></li><br>
+                <li><%= object.Y %></li><br>
+                <li><%= object.time %></li><br>
+            <% for (var patientData of resultData ) { 
+                %><li><%= patientData.field3 %> </li><br> <% 
+            } %>
+            <% i++ %>
+                <% } %> 
+            </ul>
+            <% } %>
 
             
         </main>

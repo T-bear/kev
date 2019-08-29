@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Homepage</title>
+        <title>OAuth Tutorials</title>
         <style>
             body{
                 font-family: arial;
@@ -36,19 +36,8 @@
                 padding: 0 10px;
                 color: #333;
             }
-            main img{
-                width: 40px;
-                margin-right: 10px;
-                position: relative;
-                top: 12px;
-            }
-            main p{
-                display: inline-block;
-            }
         </style>
     </head>
-
-
     <body>
         <nav>
             <ul>
@@ -64,17 +53,10 @@
             </ul>
         </nav>
         <header>
-            <h1>Welcome to video, <%= user.role %> <%= user.username %></h1>
-
             
         </header>
         <main>
-            <div>
-                <iframe width="720" height="405" src="https://www.youtube.com/embed/?listType=playlist&list=PLwfwh3oLu9dHp5OPm2-sCh9q0nHC07LK1" frameborder="0" allowfullscreen></iframe>
-                </div>
-
-
-            
+            <%= resultData %>
         </main>
     </body>
 </html>
